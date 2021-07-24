@@ -40,25 +40,23 @@ public class ImportAdapter extends RecyclerView.Adapter<ImportAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull  ImportAdapter.ViewHolder holder, int position) {
         Glide.with(applicationContext).load(imgList.get(position).getImg_url()).into(holder.img);
-        holder.txt.setText(imgList.get(position).getImg_url());
+
 
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return imgList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView img;
-        private TextView txt;
 
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
-            img=itemView.findViewById(R.id.img);
-            txt=itemView.findViewById(R.id.textyo);
+            img=itemView.findViewById(R.id.img);;
         }
     }
 
